@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Load TinyMCE Locally -->
+    <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#editor',
+        plugins: 'image link lists',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | image link',
+        images_upload_url: 'upload.php',
+        images_upload_credentials: true
+      });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a>
+    </nav>
+    
+    <h1>My First WYSIWYG Web Page</h1>
+    <form>
+        <textarea id="editor">Welcome to my website!</textarea>
+    </form>
+</body>
+</html>
